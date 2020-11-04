@@ -2,7 +2,7 @@ package classstructureintegrate;
 
 import java.util.Scanner;
 
-public class Bank {
+public class BankAccountMain {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
