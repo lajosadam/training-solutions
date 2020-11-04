@@ -2,43 +2,54 @@ package classstructureintegrate;
 
 import java.util.Scanner;
 
-public class BankAccountMain {
-    public static void main(String[] args) {
+public class Bank {
 
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Account name: ");
-        String owner = scanner.nextLine();
-
-        System.out.println("Account Number: ");
+        System.out.println("Számla száma: ");
         String accountNumber = scanner.nextLine();
 
-        System.out.println("Balance: ");
-        int balance = scanner.nextInt();
-        scanner.nextLine();
+        System.out.println("Tulajdonos: ");
+        String owner = scanner.nextLine();
 
-        BankAccount bankAccount = new BankAccount(accountNumber, owner, balance);
-        System.out.println("Default balance: "+bankAccount.getInfo());
-
-        BankAccount bankAccount2 = new BankAccount("10073217-12000098-67341590", "Pityu", 1000);
-
-        bankAccount.deposit(25000);
-        System.out.println("Deposit balance: "+bankAccount.getInfo());
-
-        bankAccount.withdraw(10000);
-        System.out.println("Withdraw balance: "+bankAccount.getInfo());
-
-        System.out.println("Transfer amount: ");
+        System.out.println("Nyitó összeg: ");
         int amount = scanner.nextInt();
         scanner.nextLine();
 
-        System.out.println("Target account number: ");
-        String targetAccount = scanner.nextLine(); /* vezérlő szerkezet nélkül nem tudok egyezést keresni*/
-        System.out.println("Target Balance: "+bankAccount2.getBalance());
+        BankAccount firstAccount = new BankAccount(accountNumber, owner, amount);
 
-        bankAccount.transfer(amount);
-        System.out.println("Balance: "+bankAccount.getBalance());
-        bankAccount2.deposit(amount);
-        System.out.println("Target balance after transfer: "+bankAccount2.getBalance());
+        System.out.println("2. Számla száma: ");
+        String accountNumber2 = scanner.nextLine();
+
+        System.out.println("Tulajdonos: ");
+        String owner2 = scanner.nextLine();
+
+        System.out.println("Nyitó összeg: ");
+        int amount2 = scanner.nextInt();
+
+        BankAccount secondAccount = new BankAccount(accountNumber2, owner2, amount2);
+
+        System.out.println(firstAccount.getInfo());
+        System.out.println(secondAccount.getInfo());
+
+        System.out.println("Mennyit szeretne befizetni az első számlára?");
+        int depositAmount = scanner.nextInt();
+        firstAccount.deposit(depositAmount);
+
+        System.out.println(firstAccount.getInfo());
+
+        System.out.println("Mennyit szeretne felvenni a második számláról?");
+        int withdrawAmount = scanner.nextInt();
+        secondAccount.withdraw(withdrawAmount);
+
+        System.out.println(secondAccount.getInfo());
+
+        System.out.println("Mennyit szeretne átutalni az első számláról a másodikra?");
+        int transferAmount = scanner.nextInt();
+        firstAccount.transfer(secondAccount, transferAmount);
+
+        System.out.println(firstAccount.getInfo());
+        System.out.println(secondAccount.getInfo());
     }
 }

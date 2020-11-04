@@ -1,12 +1,11 @@
 package classstructureintegrate;
 
-import java.io.ObjectInput;
-import java.lang.reflect.Array;
-
 public class BankAccount {
 
     private String accountNumber;
+
     private String owner;
+
     private int balance;
 
     public BankAccount(String accountNumber, String owner, int balance) {
@@ -15,27 +14,20 @@ public class BankAccount {
         this.balance = balance;
     }
 
-    public void deposit(int amount){
-        this.balance += amount;
+    public void deposit(int amount) {
+        balance = balance + amount;
     }
 
-    public void withdraw(int amount){
-        this.balance -= amount;
+    public void withdraw(int amount) {
+        balance = balance - amount;
     }
 
-    public int getBalance() {
-        return balance;
+    public void transfer(BankAccount transfer, int amount) {
+        withdraw(amount);
+        transfer.deposit(amount);
     }
 
-    public void setBalance(int balance) {
-        this.balance = balance;
-    }
-
-    public void transfer(int amount){
-        this.balance -= amount;
-    }
-
-    public String getInfo(){
-        return this.owner + " " + "("+this.accountNumber+"): " + this.balance + " Ft";
+    public String getInfo() {
+        return owner + " (" + accountNumber + "):" + balance + " Ft";
     }
 }
