@@ -50,8 +50,10 @@ public class Controller {
                 break;
             case 6:
                 break;
+            case 6:
+                break;
             default:
-                System.out.println("NANI???");
+                System.out.println("Nem választottál");
                 break;
         }
 
