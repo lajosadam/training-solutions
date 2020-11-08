@@ -37,7 +37,7 @@ public class Office {
     public void printAreas(){
         System.out.println("_______________[Tárgyaló területe]_______________");
         for(int i=meetingRoom.size()-1; i>=0; i--) {
-            System.out.println("Területe: " + meetingRoom.get(i).getArea());
+            System.out.println("A " + meetingRoom.get(i).getName() + " területe: " + meetingRoom.get(i).getArea());
         }
     }
 /*

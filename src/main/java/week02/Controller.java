@@ -50,7 +50,7 @@ public class Controller {
                 break;
             case 6:
                 break;
-            case 6:
+            case 7:
                 break;
             default:
                 System.out.println("Nem választottál");
