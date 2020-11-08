@@ -41,7 +41,7 @@ public class Controller {
                 office.printNamesReverse();
                 break;
             case 3:
-
+                office.printEventNames();
                 break;
             case 4:
                 office.printAreas();
@@ -77,6 +77,7 @@ public class Controller {
         Controller controller = new Controller();
         controller.readOffice();
         controller.printMenu();
+
 
     }
 }
