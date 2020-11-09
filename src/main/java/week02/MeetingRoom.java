@@ -2,8 +2,8 @@ package week02;
 
 public class MeetingRoom {
 
-    String name;
-    int width,length;
+    private String name;
+    private int width,length;
 
     public MeetingRoom(String name, int width, int length) {
         this.name = name;
