@@ -1,0 +1,3 @@
+- Sikeresen elvégezni a JAVA kurzust
+- Szoftverfejlesztőként elhelyezkedni
+- Megvalósítani az előbbi kettőt
