@@ -32,6 +32,7 @@ public class Trainer {
 
         MaxAgeCalculator calculator = new MaxAgeCalculator();
         System.out.println(calculator.trainerWithMaxAge(trainers).toString());
+        System.out.println("Van-e olyan oktató, aki 50 évnél idősebb: " + calculator.trainerWithMinAge(trainers, 50));
 
     }
 }

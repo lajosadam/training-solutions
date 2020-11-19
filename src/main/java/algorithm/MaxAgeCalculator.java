@@ -12,4 +12,14 @@ public class MaxAgeCalculator {
         }
         return localTrainer;
     }
+
+    public boolean trainerWithMinAge(List<Trainer> trainers, int min){
+        boolean value = false;
+        for (Trainer i : trainers){
+            if (i.getAge() > min){
+                value = true;
+            }
+        }
+        return value;
+    }
 }
