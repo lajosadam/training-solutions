@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class NumberGuesser {
     private Random random = new Random();
-    private int randomNumber = random.nextInt(100+1);
+    private int randomNumber = random.nextInt(100)+1;
 
     public int getRandomNumber() {
         return randomNumber;
