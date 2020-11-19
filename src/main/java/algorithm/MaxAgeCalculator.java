@@ -1,0 +1,15 @@
+package algorithm;
+
+import java.util.List;
+
+public class MaxAgeCalculator {
+    public  Trainer trainerWithMaxAge(List<Trainer> trainers){
+        Trainer localTrainer = null;
+        for (Trainer i : trainers){
+            if (localTrainer==null || i.getAge() > localTrainer.getAge()){
+                localTrainer = i;
+            }
+        }
+        return localTrainer;
+    }
+}
