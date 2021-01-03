@@ -8,9 +8,9 @@ public class Zoo {
 
         ArrayList<Animal> animals = new ArrayList<>();
 
-        Duck duck = new Duck();
-        Lion lion = new Lion();
-        Worm worm = new Worm();
+        Animal duck = new Duck();
+        Animal lion = new Lion();
+        Animal worm = new Worm();
 
         animals.add(duck);
         animals.add(lion);
