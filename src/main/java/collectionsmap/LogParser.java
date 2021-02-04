@@ -14,12 +14,10 @@ public class LogParser {
 
     public Map<String, List<Entry>> parseLog(String log){
 
-        Map<String, Entry> returnMap = null;
+        Map<String, List<Entry>> returnMap = null;
 
-        returnMap.put(date, new Entry("172.168.0.1", new Date(), "login1"));
-        returnMap.put(date, new Entry("172.168.0.111", new Date(), "login2"));
-        returnMap.put(date, new Entry("172.168.0.150", new Date(), "login3"));
 
+        return returnMap;
     }
 
 
