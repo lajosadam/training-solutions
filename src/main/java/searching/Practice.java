@@ -17,7 +17,6 @@ public class Practice {
         System.out.println(Collections.min(integerLista));
         System.out.println(Collections.max(integerLista));
 
-
     }
 
 }
