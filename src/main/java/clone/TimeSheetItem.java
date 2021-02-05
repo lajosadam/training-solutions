@@ -43,7 +43,7 @@ public class TimeSheetItem {
         this.project = project;
     }
 
-    public String getFrom() {
+    public LocalDateTime getFrom() {
         return from;
     }
 
@@ -51,7 +51,7 @@ public class TimeSheetItem {
         this.from = from;
     }
 
-    public String getTo() {
+    public LocalDateTime getTo() {
         return to;
     }
 
