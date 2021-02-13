@@ -18,8 +18,10 @@ public class LambdaClassMain {
         // LAMBDA verzió:
         Collections.sort(lista, Comparator.comparingInt(lambdaClass -> lambdaClass.getYearOfBirth()));
 
+        System.out.println(lista);
+
         //METHOD verzió:
-        // Collections.sort(lista, Comparator.comparingInt(LambdaClass::getYearOfBirth));
+        Collections.sort(lista, Comparator.comparing(LambdaClass::getYearOfBirth, Comparator.reverseOrder()));
 
         System.out.println(lista);
 
