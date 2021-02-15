@@ -13,7 +13,7 @@ public class Cruise {
 
     private double basicPrice;
 
-    private List<Passenger> passengers;
+    private List<Passenger> passengers = new ArrayList<>();
 
     public Cruise(Boat boat, LocalDate sailing, double basicPrice) {
         this.boat = boat;
@@ -39,10 +39,10 @@ public class Cruise {
 
     public void bookPassenger(Passenger passenger){
         //: egy foglalás. Ellenőrizni kell, hogy van-e még elég hely.
-        if (getPassengers().size()<200){
-            passengers.add(passenger);
+        if (passengers.size()>20){
+            throw new IllegalStateException("Ningy elég hely a hajón!!!");
         }else {
-            throw new IllegalStateException("Nincs elég hely a 200 fős hajón!");
+            this.passengers.add(passenger);
         }
     }
 /*
