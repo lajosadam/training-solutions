@@ -45,12 +45,25 @@ public class Cruise {
             this.passengers.add(passenger);
         }
     }
-/*
+
     public double getPriceForPassenger(Passenger passenger){
         //visszaadja, hogy mennyibe kerülne a foglalás. Ez a metódus még NEM foglal.
+        // LUXURY = 3,0, FIRST = 1,8 és  SECOND = 1,0
+        double priceValue = 0.0;
+        switch (passenger.getCruiseClass())
+        {
+            case LUXURY: priceValue += basicPrice * 3.0d;
+            break;
 
+            case FIRST: priceValue += basicPrice * 1.8d;
+            break;
+
+            case SECOND: priceValue += basicPrice * 1.0d;
+            break;
+        }
+        return priceValue;
     }
-
+/*
     public Passenger findPassengerByName(String name){
         //foglalás megkeresése név alapján
 

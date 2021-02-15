@@ -38,6 +38,7 @@ public class CruiseTest {
         assertThrows(IllegalArgumentException.class,
                 () -> cruise.bookPassenger(new Passenger("John Doe", CruiseClass.LUXURY)));
     }
+*/
 
     @Test
     void getPriceForPassenger() {
@@ -50,7 +51,7 @@ public class CruiseTest {
         price = cruise.getPriceForPassenger(new Passenger("John Doe", CruiseClass.SECOND));
         assertEquals(100_000, price, 0.5);
     }
-
+/*
     @Test
     void findPassengerByName() {
         cruise.bookPassenger(new Passenger("John Doe", CruiseClass.LUXURY));
