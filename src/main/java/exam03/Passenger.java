@@ -4,7 +4,7 @@ public class Passenger {
 
     private String name;
 
-    CruiseClass cruiseClass;
+    private CruiseClass cruiseClass;
 
     public Passenger(String name, CruiseClass cruiseClass) {
         this.name = name;
